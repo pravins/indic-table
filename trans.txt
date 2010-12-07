@@ -108,8 +108,8 @@ PINYIN_MODE = FALSE
 ### the key combination you want; the 3rd column are frequency of the character
 ### or phrase.
 BEGIN_TABLE
-aka अक
-akaa अका
+aka अक 4
+akaa अका   4
 akatha अकथ 3
 akabar अकबर 124
 akabarali अकबरअली 2
