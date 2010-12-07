@@ -97,6 +97,8 @@ PINYIN_MODE = FALSE
 ### of phrase. This have to be satisfied if you need ibus-table to build up
 ### your own inputed phrase via your daily using.
 RULES = ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
+ce3:p11+p12+p21+p22+p31+p32;ce4:p11+p21+p22+p31+p32+p41;ca5:p11+p21+p31+p41+p51
+ce4:p11+p12+p21+p22+p31+p32+p41+p42;ce5:p11+p21+p22+p31+p32+p41+p42+p51;ca6:p11+p21+p31+p41+p51+61
 
 END_DEFINITION
 
@@ -108,16 +110,16 @@ END_DEFINITION
 ### the key combination you want; the 3rd column are frequency of the character
 ### or phrase.
 BEGIN_TABLE
-aka अक 4
-akaa अका   4
-akatha अकथ 3
-akabar अकबर 124
-akabarali अकबरअली 2
-akabarkhan अकबरखॉं 4
-akabarane अकबराने 2
-akamal अकमल 40
-akar अकर 227
-akaram अकरम 8
+aka	अक	4
+akaa	अका	4
+akatha	अकथ	3
+akabar	अकबर	124
+akabarali	अकबरअली	2
+akabarkhan	अकबरखॉं	4
+akabarane	अकबराने	2
+akamal	अकमल	40
+akar	अकर	227
+akaram	अकरम	8
 END_TABlE
 
 ### Since some input methods use different table for every character to make
