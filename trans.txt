@@ -31,9 +31,9 @@ ICON = ibus-table.svg
 NAME = trans
 
 ### The local names of this table, this is optional
-NAME.mr_IN = लय भारी
-#NAME.zh_HK = 形碼
-#NAME.zh_TW = 形碼
+NAME.mr_IN = लय
+###NAME.zh_HK = 形碼
+###NAME.zh_TW = 形碼
 
 ### Description
 DESCRIPTION = This is a Marathi predict engine table for IBus Table.
@@ -58,7 +58,7 @@ VALID_INPUT_CHARS = abcdefghijklmnopqrstuvwxyz
 LAYOUT = us
 
 ### The max number of input keys for every phrase or character.
-MAX_KEY_LENGTH = 10
+MAX_KEY_LENGTH = 2
 
 ### Use auto_commit mode as default
 AUTO_COMMIT = FALSE
