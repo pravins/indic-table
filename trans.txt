@@ -130,6 +130,6 @@ END_TABlE
 ### if you don't need different word-building code, please comment out the
 ### next few lines with ###, just like these lines you are look at now.
 #BEGIN_GOUCI
-#character_1	goucima_1
-#character_1	goucima_2
-#END_GOUCI
+###character_1	goucima_1
+###character_1	goucima_2
+###END_GOUCI
