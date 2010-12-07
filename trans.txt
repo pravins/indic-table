@@ -58,7 +58,7 @@ VALID_INPUT_CHARS = abcdefghijklmnopqrstuvwxyz
 LAYOUT = us
 
 ### The max number of input keys for every phrase or character.
-MAX_KEY_LENGTH = 10
+MAX_KEY_LENGTH = 30
 
 ### Use auto_commit mode as default
 AUTO_COMMIT = FALSE
@@ -110,16 +110,42 @@ END_DEFINITION
 ### the key combination you want; the 3rd column are frequency of the character
 ### or phrase.
 BEGIN_TABLE
-aka	अक	4
-akaa	अका	4
-akatha	अकथ	3
+akabaraane	अकबराने	2
+akabarakhauun	अकबरखॉं	4
+akabaralii	अकबरअली	2
+akabarryaa	अकबऱ्या	2
+akabaruddiin	अकबरुद्दीन	2
 akabar	अकबर	124
-akabarali	अकबरअली	2
-akabarkhan	अकबरखॉं	4
-akabarane	अकबराने	2
-akamal	अकमल	40
-akar	अकर	227
-akaram	अकरम	8
+a	अ	4
+hyaanchyaakadde	ह्यांच्याकडे	2
+hyaannaa	ह्यांना	3
+hyaannii	ह्यांनी	7
+hyaant	ह्यांत	3
+hyaan	ह्यां	18
+hyaashivaay	ह्याशिवाय	4
+hyubar	ह्युबर	10
+hyugo	ह्युगो	7
+hyuiittavar	ह्युईटवर	2
+hyuiitt	ह्युईट	50
+hyulett	ह्युलेट	6
+hyuman	ह्युमन	21
+hyundaaii	ह्युंदाई	17
+hyunddaaii	ह्युंडाई	7
+hyundii	ह्युंदई	2
+hyung	ह्युंग	5
+hyun	ह्युन	2
+hyusttan	ह्युस्टन	5
+hyuujes	ह्यूजेस	2
+hyuuj	ह्यूज	4
+hyuulett	ह्यूलेट	3
+hyuuman	ह्यूमन	39
+hyuum	ह्यूम	4
+hyuun	ह्यून	5
+hyuusttan	ह्यूस्टन	6
+hyuu	ह्यू	7
+hyuyaan	ह्युयान	6
+kii	की	4
+ki	कि	4
 END_TABlE
 
 ### Since some input methods use different table for every character to make
