@@ -1,0 +1,846 @@
+### File header must not be modified
+### This file must be encoded into UTF-8.
+### This table under LGPL
+### comments start with ### not single #
+### Derive from the format of SCIM Table, so you can modify the table from
+### scim-tables' table
+SCIM_Generic_Table_Phrase_Library_TEXT
+VERSION_1_0
+
+### Begin Table definition.
+BEGIN_DEFINITION
+
+### License
+###LICENSE = LGPL
+
+### An unique id to distinguish this table among others.
+### Use uuidgen to generate this kind of id.
+UUID = c9851827-0abe-12ed-8db5-010b9d51ffed
+
+### A unique number indicates the version of this file.
+### For example the last modified date of this file.
+### This number must be less than 2^32.
+### Just make your table version-able
+SERIAL_NUMBER = 20101207
+
+### ICON can be any format as long as your pygtk can recognized
+### the most widely ones are "png" and "svg", letter one is recommended
+ICON = mr-inscript.png
+
+### The default name of this table, this is needed
+NAME = Marathi Predictive
+
+### The local names of this table, this is optional
+NAME.mr_IN = मराठी
+
+### Description
+DESCRIPTION = This is a Marathi predict engine table for IBus Table.
+
+### Supported languages of this table
+### sigle "zh_CN" just be recognized as zh_CN,
+### but "zh_CN, zh_HK" or more zh_XX will be recognized as zh;
+### and "en_US, zh_CN" will be just ignored.
+LANGUAGES = mr_IN
+
+### The author of this table
+AUTHOR = Pravin Satpute <psatpute@redhat.com> 
+
+### Prompt string to be displayed in the status area, CN will be replaced by
+### the gettext tools in runtime as 中.
+STATUS_PROMPT = MR
+
+### Valid input chars.
+VALID_INPUT_CHARS = abcdefghijklmnopqrstuvwxyz
+
+### Layout
+### LAYOUT = us
+
+### The max number of input keys for every phrase or character.
+MAX_KEY_LENGTH = 50
+
+### Use auto_commit mode as default
+AUTO_COMMIT = FALSE
+DISCARD_INVALID_KEY=FALSE
+
+### Use full width punctuation by default
+DEF_FULL_WIDTH_PUNCT = TRUE
+### Not use full width letter by default
+DEF_FULL_WIDTH_LETTER = TRUE
+
+### Whether user are allow to define phrase, default is true
+### You have to define the word construction rules below.
+### For input methods which do not input phrases, set this to False
+USER_CAN_DEFINE_PHRASE = TRUE
+
+### Whether support PinYin Mode, default is true.
+### this feature is just for Chinese, set it to False if your IM is not
+### Chinese.
+### PINYIN_MODE = FALSE
+
+### If true then the phrases' frequencies will be adjusted dynamically
+### according your using frequency.
+DYNAMIC_ADJUST = TRUE 
+
+### Some characters whose frequencies should be fix all the time, e.g. 
+### some punctuations
+### NO_CHECK_CHARS = 
+
+### Rules for constructing user defined phrase
+### "ce" stands for "ci equal", a Chinese English :), means "phrase length
+### equal to", thus ce2 -> phrase length equal to 2; and "ca" means "phrase
+### length equal or above", so ca4 -> phrase length equal or above 4.
+### p21 -> the 1st key of 2nd character in the phrase, and so on.
+### Each rule separate via ";". 
+### Example below is a complete rule-set, 
+### becuase [2,2] ∩ [3,3] ∩ [4,+∞] = [2,+∞], which is the range of length
+### of phrase. This have to be satisfied if you need ibus-table to build up
+### your own inputed phrase via your daily using.
+### RULES = ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
+### ce3:p11+p12+p21+p22+p31+p32;ce4:p11+p21+p22+p31+p32+p41;ca5:p11+p21+p31+p41+p51
+### ce4:p11+p12+p21+p22+p31+p32+p41+p42;ce5:p11+p21+p22+p31+p32+p41+p42+p51;ca6:p11+p21+p31+p41+p51+61
+
+END_DEFINITION
+
+### Begin Table data.
+### Format of every line whose formated in "input_keys\tphrase\tfreq\n" is an
+### entry.
+### From left to right, the 1st column are the input key combination that you
+### entered via keyboard; the 2nd column are presented character or phrase of
+### the key combination you want; the 3rd column are frequency of the character
+### or phrase.
+BEGIN_TABLE
+a	अ	100
+aa	आ	100
+i	इ	100
+ii	ई	100
+u	उ	100
+uu	ऊ	100
+hri	ऋ	100
+lru	ऌ	100
+e	ए	100
+ai	ऐ	100
+au	ऑ	100
+o	ओ	100
+au	औ	100
+aya	ॲ	100
+om	ॐ	100
+k	क्	100
+ka	क	100
+kaa	का	100
+ki	कि	100
+kii	की	100
+kii	की	100
+ku	कु	100
+kuu	कू	100
+ke	के	100
+kai	कै	100
+ko	को	100
+kau	कौ	100
+kn	कं	100
+kyn	कँ	100
+kah	कः	100
+kauu	कॉ	100
+kay	कॅ	100
+kru	कृ	100
+klri	कॢ	100
+kh	ख्	100
+kha	ख	100
+khaa	खा	100
+khi	खि	100
+khii	खी	100
+khii	खी	100
+khu	खु	100
+khuu	खू	100
+khe	खे	100
+khai	खै	100
+kho	खो	100
+khau	खौ	100
+khn	खं	100
+khyn	खँ	100
+khah	खः	100
+khauu	खॉ	100
+khay	खॅ	100
+khru	खृ	100
+khlri	खॢ	100
+g	ग्	100
+ga	ग	100
+gaa	गा	100
+gi	गि	100
+gii	गी	100
+gii	गी	100
+gu	गु	100
+guu	गू	100
+ge	गे	100
+gai	गै	100
+go	गो	100
+gau	गौ	100
+gn	गं	100
+gyn	गँ	100
+gah	गः	100
+gauu	गॉ	100
+gay	गॅ	100
+gru	गृ	100
+glri	गॢ	100
+gh	घ्	100
+gha	घ	100
+ghaa	घा	100
+ghi	घि	100
+ghii	घी	100
+ghii	घी	100
+ghu	घु	100
+ghuu	घू	100
+ghe	घे	100
+ghai	घै	100
+gho	घो	100
+ghau	घौ	100
+ghn	घं	100
+ghyn	घँ	100
+ghah	घः	100
+ghauu	घॉ	100
+ghay	घॅ	100
+ghru	घृ	100
+ghlri	घॢ	100
+ng	ङ्	100
+nga	ङ	100
+ngaa	ङा	100
+ngi	ङि	100
+ngii	ङी	100
+ngii	ङी	100
+ngu	ङु	100
+nguu	ङू	100
+nge	ङे	100
+ngai	ङै	100
+ngo	ङो	100
+ngau	ङौ	100
+ngn	ङं	100
+ngyn	ङँ	100
+ngah	ङः	100
+ngauu	ङॉ	100
+ngay	ङॅ	100
+ngru	ङृ	100
+nglri	ङॢ	100
+ch	च्	100
+cha	च	100
+chaa	चा	100
+chi	चि	100
+chii	ची	100
+chii	ची	100
+chu	चु	100
+chuu	चू	100
+che	चे	100
+chai	चै	100
+cho	चो	100
+chau	चौ	100
+chn	चं	100
+chyn	चँ	100
+chah	चः	100
+chauu	चॉ	100
+chay	चॅ	100
+chru	चृ	100
+chlri	चॢ	100
+chh	छ्	100
+chha	छ	100
+chhaa	छा	100
+chhi	छि	100
+chhii	छी	100
+chhii	छी	100
+chhu	छु	100
+chhuu	छू	100
+chhe	छे	100
+chhai	छै	100
+chho	छो	100
+chhau	छौ	100
+chhn	छं	100
+chhyn	छँ	100
+chhah	छः	100
+chhauu	छॉ	100
+chhay	छॅ	100
+chhru	छृ	100
+chhlri	छॢ	100
+j	ज्	100
+ja	ज	100
+jaa	जा	100
+ji	जि	100
+jii	जी	100
+jii	जी	100
+ju	जु	100
+juu	जू	100
+je	जे	100
+jai	जै	100
+jo	जो	100
+jau	जौ	100
+jn	जं	100
+jyn	जँ	100
+jah	जः	100
+jauu	जॉ	100
+jay	जॅ	100
+jru	जृ	100
+jlri	जॢ	100
+jh	झ्	100
+jha	झ	100
+jhaa	झा	100
+jhi	झि	100
+jhii	झी	100
+jhii	झी	100
+jhu	झु	100
+jhuu	झू	100
+jhe	झे	100
+jhai	झै	100
+jho	झो	100
+jhau	झौ	100
+jhn	झं	100
+jhyn	झँ	100
+jhah	झः	100
+jhauu	झॉ	100
+jhay	झॅ	100
+jhru	झृ	100
+jhlri	झॢ	100
+nj	ञ्	100
+nja	ञ	100
+njaa	ञा	100
+nji	ञि	100
+njii	ञी	100
+njii	ञी	100
+nju	ञु	100
+njuu	ञू	100
+nje	ञे	100
+njai	ञै	100
+njo	ञो	100
+njau	ञौ	100
+njn	ञं	100
+njyn	ञँ	100
+njah	ञः	100
+njauu	ञॉ	100
+njay	ञॅ	100
+njru	ञृ	100
+njlri	ञॢ	100
+tt	ट्	100
+tta	ट	100
+ttaa	टा	100
+tti	टि	100
+ttii	टी	100
+ttii	टी	100
+ttu	टु	100
+ttuu	टू	100
+tte	टे	100
+ttai	टै	100
+tto	टो	100
+ttau	टौ	100
+ttn	टं	100
+ttyn	टँ	100
+ttah	टः	100
+ttauu	टॉ	100
+ttay	टॅ	100
+ttru	टृ	100
+ttlri	टॢ	100
+tth	ठ्	100
+ttha	ठ	100
+tthaa	ठा	100
+tthi	ठि	100
+tthii	ठी	100
+tthii	ठी	100
+tthu	ठु	100
+tthuu	ठू	100
+tthe	ठे	100
+tthai	ठै	100
+ttho	ठो	100
+tthau	ठौ	100
+tthn	ठं	100
+tthyn	ठँ	100
+tthah	ठः	100
+tthauu	ठॉ	100
+tthay	ठॅ	100
+tthru	ठृ	100
+tthlri	ठॢ	100
+dd	ड्	100
+dda	ड	100
+ddaa	डा	100
+ddi	डि	100
+ddii	डी	100
+ddii	डी	100
+ddu	डु	100
+dduu	डू	100
+dde	डे	100
+ddai	डै	100
+ddo	डो	100
+ddau	डौ	100
+ddn	डं	100
+ddyn	डँ	100
+ddah	डः	100
+ddauu	डॉ	100
+dday	डॅ	100
+ddru	डृ	100
+ddlri	डॢ	100
+ddh	ढ्	100
+ddha	ढ	100
+ddhaa	ढा	100
+ddhi	ढि	100
+ddhii	ढी	100
+ddhii	ढी	100
+ddhu	ढु	100
+ddhuu	ढू	100
+ddhe	ढे	100
+ddhai	ढै	100
+ddho	ढो	100
+ddhau	ढौ	100
+ddhn	ढं	100
+ddhyn	ढँ	100
+ddhah	ढः	100
+ddhauu	ढॉ	100
+ddhay	ढॅ	100
+ddhru	ढृ	100
+ddhlri	ढॢ	100
+nn	ण्	100
+nna	ण	100
+nnaa	णा	100
+nni	णि	100
+nnii	णी	100
+nnii	णी	100
+nnu	णु	100
+nnuu	णू	100
+nne	णे	100
+nnai	णै	100
+nno	णो	100
+nnau	णौ	100
+nnn	णं	100
+nnyn	णँ	100
+nnah	णः	100
+nnauu	णॉ	100
+nnay	णॅ	100
+nnru	णृ	100
+nnlri	णॢ	100
+t	त्	100
+ta	त	100
+taa	ता	100
+ti	ति	100
+tii	ती	100
+tii	ती	100
+tu	तु	100
+tuu	तू	100
+te	ते	100
+tai	तै	100
+to	तो	100
+tau	तौ	100
+tn	तं	100
+tyn	तँ	100
+tah	तः	100
+tauu	तॉ	100
+tay	तॅ	100
+tru	तृ	100
+tlri	तॢ	100
+th	थ्	100
+tha	थ	100
+thaa	था	100
+thi	थि	100
+thii	थी	100
+thii	थी	100
+thu	थु	100
+thuu	थू	100
+the	थे	100
+thai	थै	100
+tho	थो	100
+thau	थौ	100
+thn	थं	100
+thyn	थँ	100
+thah	थः	100
+thauu	थॉ	100
+thay	थॅ	100
+thru	थृ	100
+thlri	थॢ	100
+d	द्	100
+da	द	100
+daa	दा	100
+di	दि	100
+dii	दी	100
+dii	दी	100
+du	दु	100
+duu	दू	100
+de	दे	100
+dai	दै	100
+do	दो	100
+dau	दौ	100
+dn	दं	100
+dyn	दँ	100
+dah	दः	100
+dauu	दॉ	100
+day	दॅ	100
+dru	दृ	100
+dlri	दॢ	100
+dh	ध्	100
+dha	ध	100
+dhaa	धा	100
+dhi	धि	100
+dhii	धी	100
+dhii	धी	100
+dhu	धु	100
+dhuu	धू	100
+dhe	धे	100
+dhai	धै	100
+dho	धो	100
+dhau	धौ	100
+dhn	धं	100
+dhyn	धँ	100
+dhah	धः	100
+dhauu	धॉ	100
+dhay	धॅ	100
+dhru	धृ	100
+dhlri	धॢ	100
+n	न्	100
+na	न	100
+naa	ना	100
+ni	नि	100
+nii	नी	100
+nii	नी	100
+nu	नु	100
+nuu	नू	100
+ne	ने	100
+nai	नै	100
+no	नो	100
+nau	नौ	100
+nn	नं	100
+nyn	नँ	100
+nah	नः	100
+nauu	नॉ	100
+nay	नॅ	100
+nru	नृ	100
+nlri	नॢ	100
+p	प्	100
+pa	प	100
+paa	पा	100
+pi	पि	100
+pii	पी	100
+pii	पी	100
+pu	पु	100
+puu	पू	100
+pe	पे	100
+pai	पै	100
+po	पो	100
+pau	पौ	100
+pn	पं	100
+pyn	पँ	100
+pah	पः	100
+pauu	पॉ	100
+pay	पॅ	100
+pru	पृ	100
+plri	पॢ	100
+b	ब्	100
+ba	ब	100
+baa	बा	100
+bi	बि	100
+bii	बी	100
+bii	बी	100
+bu	बु	100
+buu	बू	100
+be	बे	100
+bai	बै	100
+bo	बो	100
+bau	बौ	100
+bn	बं	100
+byn	बँ	100
+bah	बः	100
+bauu	बॉ	100
+bay	बॅ	100
+bru	बृ	100
+blri	बॢ	100
+bh	भ्	100
+bha	भ	100
+bhaa	भा	100
+bhi	भि	100
+bhii	भी	100
+bhii	भी	100
+bhu	भु	100
+bhuu	भू	100
+bhe	भे	100
+bhai	भै	100
+bho	भो	100
+bhau	भौ	100
+bhn	भं	100
+bhyn	भँ	100
+bhah	भः	100
+bhauu	भॉ	100
+bhay	भॅ	100
+bhru	भृ	100
+bhlri	भॢ	100
+m	म्	100
+ma	म	100
+maa	मा	100
+mi	मि	100
+mii	मी	100
+mii	मी	100
+mu	मु	100
+muu	मू	100
+me	मे	100
+mai	मै	100
+mo	मो	100
+mau	मौ	100
+mn	मं	100
+myn	मँ	100
+mah	मः	100
+mauu	मॉ	100
+may	मॅ	100
+mru	मृ	100
+mlri	मॢ	100
+y	य्	100
+ya	य	100
+yaa	या	100
+yi	यि	100
+yii	यी	100
+yii	यी	100
+yu	यु	100
+yuu	यू	100
+ye	ये	100
+yai	यै	100
+yo	यो	100
+yau	यौ	100
+yn	यं	100
+yyn	यँ	100
+yah	यः	100
+yauu	यॉ	100
+yay	यॅ	100
+yru	यृ	100
+ylri	यॢ	100
+r	र्	100
+ra	र	100
+raa	रा	100
+ri	रि	100
+rii	री	100
+rii	री	100
+ru	रु	100
+ruu	रू	100
+re	रे	100
+rai	रै	100
+ro	रो	100
+rau	रौ	100
+rn	रं	100
+ryn	रँ	100
+rah	रः	100
+rauu	रॉ	100
+ray	रॅ	100
+rru	रृ	100
+rlri	रॢ	100
+rr	ऱ्	100
+rra	ऱ	100
+rraa	ऱा	100
+rri	ऱि	100
+rrii	ऱी	100
+rrii	ऱी	100
+rru	ऱु	100
+rruu	ऱू	100
+rre	ऱे	100
+rrai	ऱै	100
+rro	ऱो	100
+rrau	ऱौ	100
+rrn	ऱं	100
+rryn	ऱँ	100
+rrah	ऱः	100
+rrauu	ऱॉ	100
+rray	ऱॅ	100
+rrru	ऱृ	100
+rrlri	ऱॢ	100
+l	ल्	100
+la	ल	100
+laa	ला	100
+li	लि	100
+lii	ली	100
+lii	ली	100
+lu	लु	100
+luu	लू	100
+le	ले	100
+lai	लै	100
+lo	लो	100
+lau	लौ	100
+ln	लं	100
+lyn	लँ	100
+lah	लः	100
+lauu	लॉ	100
+lay	लॅ	100
+lru	लृ	100
+llri	लॢ	100
+ll	ळ्	100
+lla	ळ	100
+llaa	ळा	100
+lli	ळि	100
+llii	ळी	100
+llii	ळी	100
+llu	ळु	100
+lluu	ळू	100
+lle	ळे	100
+llai	ळै	100
+llo	ळो	100
+llau	ळौ	100
+lln	ळं	100
+llyn	ळँ	100
+llah	ळः	100
+llauu	ळॉ	100
+llay	ळॅ	100
+llru	ळृ	100
+lllri	ळॢ	100
+lll	ऴ्	100
+llla	ऴ	100
+lllaa	ऴा	100
+llli	ऴि	100
+lllii	ऴी	100
+lllii	ऴी	100
+lllu	ऴु	100
+llluu	ऴू	100
+llle	ऴे	100
+lllai	ऴै	100
+lllo	ऴो	100
+lllau	ऴौ	100
+llln	ऴं	100
+lllyn	ऴँ	100
+lllah	ऴः	100
+lllauu	ऴॉ	100
+lllay	ऴॅ	100
+lllru	ऴृ	100
+llllri	ऴॢ	100
+v	व्	100
+va	व	100
+vaa	वा	100
+vi	वि	100
+vii	वी	100
+vii	वी	100
+vu	वु	100
+vuu	वू	100
+ve	वे	100
+vai	वै	100
+vo	वो	100
+vau	वौ	100
+vn	वं	100
+vyn	वँ	100
+vah	वः	100
+vauu	वॉ	100
+vay	वॅ	100
+vru	वृ	100
+vlri	वॢ	100
+sh	श्	100
+sha	श	100
+shaa	शा	100
+shi	शि	100
+shii	शी	100
+shii	शी	100
+shu	शु	100
+shuu	शू	100
+she	शे	100
+shai	शै	100
+sho	शो	100
+shau	शौ	100
+shn	शं	100
+shyn	शँ	100
+shah	शः	100
+shauu	शॉ	100
+shay	शॅ	100
+shru	शृ	100
+shlri	शॢ	100
+h	ह्	100
+ha	ह	100
+haa	हा	100
+hi	हि	100
+hii	ही	100
+hii	ही	100
+hu	हु	100
+huu	हू	100
+he	हे	100
+hai	है	100
+ho	हो	100
+hau	हौ	100
+hn	हं	100
+hyn	हँ	100
+hah	हः	100
+hauu	हॉ	100
+hay	हॅ	100
+hru	हृ	100
+hlri	हॢ	100
+s	स्	100
+sa	स	100
+saa	सा	100
+si	सि	100
+sii	सी	100
+sii	सी	100
+su	सु	100
+suu	सू	100
+se	से	100
+sai	सै	100
+so	सो	100
+sau	सौ	100
+sn	सं	100
+syn	सँ	100
+sah	सः	100
+sauu	सॉ	100
+say	सॅ	100
+sru	सृ	100
+slri	सॢ	100
+ph	फ्	100
+pha	फ	100
+phaa	फा	100
+phi	फि	100
+phii	फी	100
+phii	फी	100
+phu	फु	100
+phuu	फू	100
+phe	फे	100
+phai	फै	100
+pho	फो	100
+phau	फौ	100
+phn	फं	100
+phyn	फँ	100
+phah	फः	100
+phauu	फॉ	100
+phay	फॅ	100
+phru	फृ	100
+phlri	फॢ	100
+aaaaahaaaahalaa	आऽऽला	2
+aabaadhit	आबाधित	11
+aabaadii	आबादी	7
+aabaad	आबाद	7
+aabaajii	आबाजी	39
+aabaalaal	आबालाल	3
+aabaalavruddhaanbarobarach	आबालवृद्धांबरोबरच	2
+aabaalavruddhaanchaa	आबालवृद्धांचा	5
+aabaalavruddhaanchii	आबालवृद्धांची	14
+aabaalavruddhaanchyaa	आबालवृद्धांच्या	7
+aabaalavruddhaankadduun	आबालवृद्धांकडून	2
+aabaalavruddhaannaa	आबालवृद्धांना	13
+aabaalavruddhaannii	आबालवृद्धांनी	9
+hyaanchyaakadde	ह्यांच्याकडे	2
+hyaannaa	ह्यांना	3
+hyaannii	ह्यांनी	7
+hyaant	ह्यांत	3
+hyaan	ह्यां	18
+hyaashivaay	ह्याशिवाय	4
+hyubar	ह्युबर	10
+hyugo	ह्युगो	7
+hyuiittavar	ह्युईटवर	2
+hyuiitt	ह्युईट	50
+hyulett	ह्युलेट	6
+hyuman	ह्युमन	21
+hyundaaii	ह्युंदाई	17
+hyunddaaii	ह्युंडाई	7
+hyundii	ह्युंदई	2
+hyung	ह्युंग	5
+hyun	ह्युन	2
+hyusttan	ह्युस्टन	5
+hyuujes	ह्यूजेस	2
+hyuuj	ह्यूज	4
+hyuulett	ह्यूलेट	3
+hyuuman	ह्यूमन	39
+hyuum	ह्यूम	4
+hyuun	ह्यून	5
+hyuusttan	ह्यूस्टन	6
+hyuu	ह्यू	7
+hyuyaan	ह्युयान	6
+### END_TABlE
+
+### Since some input methods use different table for every character to make
+### phrase, such as ZhengMa, they need explict define the goucima (the
+### phrase-building code for the given character), the format of every entry is
+### "character\tgoucima\n". 
+### For the input method which just use the full code as word-building code
+### just skip this field. The ibus-table will build the codes needed from
+### above TABLE.
+### if you don't need different word-building code, please comment out the
+### next few lines with ###, just like these lines you are look at now.
+###BEGIN_GOUCI
+###character_1	goucima_1
+###character_1	goucima_2
+###END_GOUCI
